@@ -1,6 +1,8 @@
 const ClientOAuth2 = require('client-oauth2');
 const https = require('https');
+
 require('dotenv').config();
+
 const client = new ClientOAuth2({
   clientId: process.env.clientId,
   clientSecret: process.env.clientSecret,
