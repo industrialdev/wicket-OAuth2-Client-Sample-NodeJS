@@ -1,7 +1,7 @@
 # Wicket.io - OAuth 2.0 Client Sample - NodeJS
 
 Establishes OAuth2.0 connection to Wicket.io. 
-Uses the package. https://www.npmjs.com/package/client-oauth2
+Uses: https://www.npmjs.com/package/client-oauth2
 
 
 ## Initialize
