@@ -31,6 +31,7 @@ Edit the .env file's settings.
 ```
 npm run start
 ```
+Or click "Launch Program" in VSCode.
 
 ## Testing Locally
 Browse to http://localhost:3000
