@@ -3,6 +3,9 @@
 Establishes OAuth2.0 connection to Wicket.io. 
 Uses: https://www.npmjs.com/package/client-oauth2
 
+> Note:  Your Wicket.io tenant must be configured to allow OAuth 2.0 authentications.  
+> For more information please contact Wicket Support.
+
 
 ## Initialize
 ```
