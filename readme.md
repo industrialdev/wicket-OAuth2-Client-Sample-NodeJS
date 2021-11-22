@@ -20,9 +20,10 @@ Edit the .env file's settings.
 | --- | --- |
 | clientId | OAuth 2.0 ClientID Ex:c02...be4 |
 | clientSecret | OAuth 2.0 Client Secret Ex:c02...be4 |
-| accessTokenUri | Ex:https://{tenant}-login.staging.wicketcloud.com/oauth2.0/accessToken
-| authorizationUri | Ex: https://{tenant}-login.staging.wicketcloud.com/oauth2.0/authorize
-| redirectUri | Ex: https://{domain}/auth/callback
+| accessTokenUri | Ex:https://{tenant}-login.staging.wicketcloud.com/oauth2.0/accessToken |
+| authorizationUri | Ex: https://{tenant}-login.staging.wicketcloud.com/oauth2.0/authorize |
+| profileUri | ex: https://{tenant}-login.staging.wicketcloud.com/oauth2.0/profile |
+| redirectUri | Ex: https://{domain}/auth/callback |
 
 
 

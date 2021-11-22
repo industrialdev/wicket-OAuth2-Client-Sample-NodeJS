@@ -6,12 +6,8 @@ const client = new ClientOAuth2({
   clientSecret: process.env.clientSecret,
   accessTokenUri: process.env.accessTokenUri,
   authorizationUri: process.env.authorizationUri,
-  redirectUri: process.redirectUri
+  redirectUri: process.env.redirectUri,
 });
-
-process.env.clientId
-
-const profileUrl = 'https://wqa-login.staging.wicketcloud.com/oauth2.0/profile';
 
 const express = require('express');
 
@@ -31,11 +27,11 @@ app.get('/auth/callback', (req, res) => {
     .then(async (user) => {
       const signed = user.sign({
         method: 'get',
-        url: profileUrl,
+        url: process.env.profileUri,
       });
 
       const profileData = await new Promise((resolve, reject) => {
-        https.get(profileUrl, signed, (profileRes) => {
+        https.get(process.env.profileUri, signed, (profileRes) => {
           let data = '';
 
           profileRes.on('data', (chunk) => {
@@ -50,7 +46,7 @@ app.get('/auth/callback', (req, res) => {
         });
       });
 
-      return res.send({ accessToken: user.accessToken, profile: profileData });
+      return res.send({ accessToken: user.accessToken, profile: JSON.parse(profileData) });
     });
 });
 
