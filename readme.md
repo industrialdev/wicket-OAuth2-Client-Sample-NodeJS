@@ -37,13 +37,13 @@ npm run start
 Or click "Launch Program" in VSCode.
 
 ## Testing Locally
-Browse to http://localhost:3000/auth/
+Browse to http://localhost:80/auth/
 
  
 
 ## Testing via NGROK
 Ngrok Tunnel
 ```
-    ./ngrok http 3000 --subdomain {subdomain}
+    ./ngrok http 80 --subdomain {subdomain}
 ```
 Browse to https://{subdomain}/auth/

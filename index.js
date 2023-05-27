@@ -16,7 +16,8 @@ const express = require('express');
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Wicket OAuth Sample Application! <br/> <a href="/auth">Login</a>');
+
 });
 
 app.get('/auth', (req, res) => {
@@ -52,6 +53,6 @@ app.get('/auth/callback', (req, res) => {
     });
 });
 
-const port = 3000;
+const port = 80;
 console.log(`Starting server on Port ${port}`);
 app.listen(port);
